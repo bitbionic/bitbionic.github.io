@@ -55,6 +55,7 @@ against a supplied data set. It is used in a tutorial demonstrating
 how to build Keras models and run them in native C++ Tensorflow applications.
 
 ```python
+'''
 MIT License
 
 Copyright (c) 2017 bitbionic
