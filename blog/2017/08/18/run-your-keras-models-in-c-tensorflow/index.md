@@ -48,14 +48,13 @@ There are a few things to note from the code listed below:
  * Make note of the shape parameter you utilize, we will need that when we run the model later.
 
 
-k2tf_trainer.pyPython
+### k2tf_trainer.py
+```python
 '''
 This script builds and trains a simple Convolutional Nerual Network (CNN)
 against a supplied data set. It is used in a tutorial demonstrating
 how to build Keras models and run them in native C++ Tensorflow applications.
 
-```python
-'''
 MIT License
 
 Copyright (c) 2017 bitbionic
@@ -437,7 +436,6 @@ When you run the code, it’s important that you make the prefix name unique to 
 
 And now let’s run this little guy on our trained model.
 
-### 
 ```
 Using TensorFlow backend.
 usage: k2tf_convert.py [-h] --model MODEL --numout NUM_OUT [--outdir OUTDIR]
@@ -472,8 +470,8 @@ Saved the constant graph (ready for inference) at:  ./output_graph.pb
 
 As you can see, two files were written out. An ASCII and .pb file. Let’s look at the graph structure, notice the input node name “firstConv2D_input” and the output name “k2tfout_0”, we will use those in the next section:
 
-### graph_def_for_reference.pb.asciiJavaScript
-```json
+### graph_def_for_reference.pb.ascii
+```javascript
 node {
   name: "firstConv2D_input"
   op: "Placeholder"
@@ -681,7 +679,7 @@ Getting more help:
 
 Now that we have everything installed, we can configure and build. Make sure you’re in the top-level tensorflow directory. I went with all the default configuration options. When you do this, the configuration tool will download a bunch of dependencies – this make take a minute or two.
 
-Configure Bazel
+### Configure Bazel
 ```
 (tensorflow) $ ~/Development/keras-to-tensorflow/tensorflow $ ./configure 
 Please specify the location of python. [Default is /home/bitwise/anaconda3/envs/tensorflow/bin/python]: 
@@ -715,7 +713,7 @@ Building: no action running
 
 Alright, we’re configured, now it’s time to build.  DISCLAIMER: I AM NOT a Bazel guru. I found these settings via Google-Fu and digging around in the configuration files. I could not find a way to get Bazel to dump the available targets. Most tutorials I saw are about building the pip target – however, I wanted to build a .so.  I started looking thru the BUILD files to find targets and found these in tensorflow/tensorflow/BUILD
 
-Tensorflow Targets
+### Tensorflow Targets
 ```python
 cc_binary(
     name = "libtensorflow.so",
@@ -769,7 +767,7 @@ SOURCES += main.cpp
 
 I included a build_tutorial_cpp.sh, here are the commands:
 
-Build instructions
+### Build instructions
 ```
 g++ -c -pipe -g -std=gnu++11 -Wall -W -fPIC -I. -I./tensorflow -I./tensorflow/bazel-tensorflow/external/eigen_archive -I./tensorflow/bazel-tensorflow/external/protobuf/src -I./tensorflow/bazel-genfiles -o main.o ./main.cpp
 g++  -o Tutorial main.o   -L./tensorflow/bazel-bin/tensorflow -ltensorflow_cc
