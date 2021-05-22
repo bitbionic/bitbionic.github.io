@@ -1,5 +1,7 @@
 # Run your Keras models in C++ Tensorflow
 
+:warning: :warning: This tutorial was new in August of 2017 - it is now ancient - please keep that in mind as you read / follow :warning: :warning:
+
 So you’ve built an awesome machine learning model in Keras and now you want to run it natively thru Tensorflow. This tutorial will show you how. All of the code in this tutorial can be cloned / downloaded from https://github.com/bitbionic/keras-to-tensorflow.git . You may want to clone it to follow along.
 
 Keras is a wonderful high level framework for building machine learning models. It is able to utilize multiple backends such as Tensorflow or Theano to do so. When a Keras model is saved via the .save method, the canonical save method serializes to an HDF5 format. Tensorflow works with Protocol Buffers, and therefore loads and saves .pb files. This tutorial demonstrates how to:
