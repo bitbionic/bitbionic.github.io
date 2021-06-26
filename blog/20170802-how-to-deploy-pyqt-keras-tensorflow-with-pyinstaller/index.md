@@ -1,5 +1,5 @@
 # How to deploy PyQt, Keras, Tensorflow apps with PyInstaller
-
+## Aug 2, 2017
 I recently needed to figure out how to deploy a Keras application on Windows 10 without requiring someone to know how to install Python and all of the dependencies for the application. This video shares what I learned in the process, showing how to deploy a Python app with many third party dependencies into a single deployment package complete with executable.
 
 [![Youtube Tutorial Link](../../../../images/pyinstaller_tutorial.jpg)](https://www.youtube.com/watch?v=fLQg8dgB7cA&ab_channel=BitBionic)

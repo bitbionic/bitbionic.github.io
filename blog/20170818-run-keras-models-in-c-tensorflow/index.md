@@ -1,5 +1,5 @@
 # Run your Keras models in C++ Tensorflow
-
+## Aug 18, 2017
 :warning: :warning: This tutorial was new in August of 2017 - it is now ancient, and many of these libraries and processes have changed - please keep that in mind as you read / follow :warning: :warning:
 
 So you’ve built an awesome machine learning model in Keras and now you want to run it natively thru Tensorflow. This tutorial will show you how. All of the code in this tutorial can be cloned / downloaded from https://github.com/bitbionic/keras-to-tensorflow.git . You may want to clone it to follow along.
